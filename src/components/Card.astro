@@ -11,14 +11,13 @@ interface Props {
 const { title, content, image, classes } = Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>("@/assets/*.svg");
-if (!images[image])
-  throw new Error(`"${image}" does not exist in glob: "@/assets/*.svg}"`);
+if (!images[image]) throw new Error(`"${image}" does not exist in glob: "@/assets/*.svg}"`);
 ---
 
 <section
   class:list={[
     classes,
-    "mx-auto w-[310px] rounded-md border border-t-4 border-theme-light-gray bg-white p-6 shadow-2xl md:w-[350px] md:p-7",
+    "mx-auto w-77.5 rounded-md border border-t-4 border-theme-light-gray bg-white p-6 shadow-2xl md:w-87.5 md:p-7",
   ]}
 >
   <h2 class="mb-2 text-xl font-semibold text-theme-very-dark-blue">
